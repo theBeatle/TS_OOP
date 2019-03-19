@@ -8,8 +8,10 @@
     "outFile": "app.js"
   },
   "files": [
-    "app.ts",
-    "inheritance.ts"
+    "01_app.ts",
+    "02_inheritance.ts",
+    "03_interfaces.ts",
+    "04_abstract_classes.ts"
   ]
 
 

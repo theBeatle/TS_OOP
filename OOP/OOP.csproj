@@ -70,8 +70,10 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="app.ts" />
-    <TypeScriptCompile Include="inheritance.ts" />
+    <TypeScriptCompile Include="01_app.ts" />
+    <TypeScriptCompile Include="02_inheritance.ts" />
+    <TypeScriptCompile Include="03_interfaces.ts" />
+    <TypeScriptCompile Include="04_abstract_classes.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

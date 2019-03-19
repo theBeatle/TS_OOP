@@ -41,8 +41,10 @@ class ColoredPoint extends BasePoint {
         let x = this.x;
     }
 }
-
 let pointBase = new BasePoint(5, 5);
-
 let coloredPoint = new ColoredPoint(5, 7, Color.Black);
+let castedPoint: BasePoint = new ColoredPoint(10, 10, Color.Green);
 console.log(coloredPoint.toString());
+console.log(castedPoint.toString());
+console.log((castedPoint as ColoredPoint).someMethod());
+console.log((<ColoredPoint>castedPoint).someMethod());

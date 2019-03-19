@@ -65,5 +65,44 @@ class ColoredPoint extends BasePoint {
 }
 let pointBase = new BasePoint(5, 5);
 let coloredPoint = new ColoredPoint(5, 7, Color.Black);
+let castedPoint = new ColoredPoint(10, 10, Color.Green);
 console.log(coloredPoint.toString());
+console.log(castedPoint.toString());
+console.log(castedPoint.someMethod());
+console.log(castedPoint.someMethod());
+let pointFromInterface = {
+    x: 5,
+    y: 5,
+    length: function () {
+        return Math.sqrt(this.x * this.x + this.y * this.y);
+    }
+};
+class PointFromInterface {
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+    }
+    length() {
+        return Math.sqrt(this.x * this.x + this.y * this.y);
+    }
+}
+class Animal {
+    constructor(theName) { this.name = theName; }
+}
+class Snake extends Animal {
+    constructor(name) { super(name); }
+    move(distance) {
+        console.log("Slithering");
+    }
+}
+class Fish extends Animal {
+    constructor(name) { super(name); }
+    move(distance) {
+        console.log("Swim");
+    }
+}
+let snake = new Snake('snake');
+snake.move(5);
+let tvarjuka = new Snake("python");
+tvarjuka.move(40);
 //# sourceMappingURL=app.js.map
