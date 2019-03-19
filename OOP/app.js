@@ -22,8 +22,8 @@ class Point2 {
 Point2.x = 10;
 Point2.y = 10;
 Point2.origin = new Point(0, 0);
-//Point2.x = 7;
-//Point2.y = 10;
+Point2.x = 1000;
+Point2.y = 10;
 let result2 = Point2.getDistanseToStart();
 console.log(result2);
 window.onload = () => {
@@ -60,7 +60,25 @@ class ColoredPoint extends BasePoint {
         return super.toString() + " color=" + Color[this.color];
     }
     someMethod() {
-        let x = this.x;
+        return this.x;
+    }
+}
+let myTrashArr = [1, true, "be be be", { a: 1, b: 2 }, [1, 2], null]; // string[], array, 
+myTrashArr = [2, false, "kek", { a: 100, b: 300 }, [3, 5], null];
+myTrashArr = ["string-yakijs", "false", 2];
+let myArr;
+myArr = [true];
+//myArr = [{ a: true, b: 12 }];
+let myArr2;
+let objArr;
+objArr = [new BasePoint(1, 1), new ColoredPoint(2, 2, Color.Red)];
+for (var i = 0; i < objArr.length; i++) {
+    if (objArr instanceof ColoredPoint) {
+        let tmpObj = objArr[i];
+        console.log(`  ${tmpObj.getDistanseToStart()} ${tmpObj.someMethod()}`);
+    }
+    else {
+        console.log(`  ${objArr[i].getDistanseToStart()} ${objArr[i]}`);
     }
 }
 let pointBase = new BasePoint(5, 5);
@@ -86,6 +104,8 @@ class PointFromInterface {
         return Math.sqrt(this.x * this.x + this.y * this.y);
     }
 }
+let xxxcxc = new PointFromInterface(34, 56);
+console.log(xxxcxc.length());
 class Animal {
     constructor(theName) { this.name = theName; }
 }
@@ -105,4 +125,6 @@ let snake = new Snake('snake');
 snake.move(5);
 let tvarjuka = new Snake("python");
 tvarjuka.move(40);
+tvarjuka = new Fish("seledka");
+tvarjuka.move(20);
 //# sourceMappingURL=app.js.map

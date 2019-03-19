@@ -23,3 +23,7 @@ snake.move(5);
 
 let tvarjuka: Animal = new Snake("python");
 tvarjuka.move(40);
+
+tvarjuka = new Fish("seledka");
+tvarjuka.move(20);
+

@@ -6,6 +6,7 @@
     "sourceMap": true,
     "target": "es6",
     "outFile": "app.js"
+   
   },
   "files": [
     "01_app.ts",

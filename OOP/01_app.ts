@@ -32,8 +32,8 @@ class Point2 {
     static origin = new Point(0, 0);
 }
 
-//Point2.x = 7;
-//Point2.y = 10;
+Point2.x = 1000;
+Point2.y = 10;
 let result2 = Point2.getDistanseToStart();
 console.log(result2);
 

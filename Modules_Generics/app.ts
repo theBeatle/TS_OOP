@@ -13,6 +13,7 @@ enum SomeEnum {
 }
 
 namespace Points {
+    import someC = PointProgram.Enums.Color;// alias :-)
     export class Point {
         protected x: number;
         y: number;
@@ -36,7 +37,7 @@ namespace Points {
     }
     export class ColoredPoint extends Point {
 
-        constructor(x: number, y: number, private readonly color: PointProgram.Enums.Color) {
+        constructor(x: number, y: number, private readonly color: someC) {
             super(x, y);
         }
 
@@ -50,6 +51,9 @@ namespace Points {
 
         someMethod() {
             let x = this.x;
+            import al = MyNamespace.Interfaces.SimeAnimal;
+            let cc = new al();
+
         }
 
     }
@@ -65,6 +69,8 @@ namespace MyNamespace {
             id;
             getInfo();
         }
+        export class SimeAnimal {
+        } ;
     }
 
     export class User implements alias1.IUser {

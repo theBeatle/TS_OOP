@@ -4,12 +4,10 @@
     "noEmitOnError": true,
     "removeComments": false,
     "sourceMap": true,
-    "target": "es6",
-    "outFile": "app.js"
+    "target": "es6"
   },
   "exclude": [
     "node_modules",
     "wwwroot"
   ]
-
 }

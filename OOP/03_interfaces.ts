@@ -16,3 +16,7 @@ class PointFromInterface implements IPoint {
         return Math.sqrt(this.x * this.x + this.y * this.y);
     }
 }
+
+
+let xxxcxc = new PointFromInterface(34, 56);
+console.log(xxxcxc.length());
