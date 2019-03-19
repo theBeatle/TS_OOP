@@ -1,9 +1,15 @@
 class Point {
+    //public x: number;
+    //public y: number;
+    //constructor(x: number, y: number) {
+    //    this.x = x;
+    //    this.y = y;
+    //}
     constructor(x, y) {
         this.x = x;
         this.y = y;
+        x = 2;
     }
-    //constructor(public x: number, public y: number) { }
     getDistanseToStart() {
         return Math.sqrt(this.x * this.x + this.y * this.y);
     }
@@ -53,7 +59,7 @@ class ColoredPoint extends BasePoint {
         super(x, y);
         this.color = color;
     }
-    getColor() {
+    get getColor() {
         return this.color;
     }
     toString() {
@@ -74,7 +80,7 @@ let objArr;
 objArr = [new BasePoint(1, 1), new ColoredPoint(2, 2, Color.Red)];
 for (var i = 0; i < objArr.length; i++) {
     if (objArr instanceof ColoredPoint) {
-        let tmpObj = objArr[i];
+        let tmpObj = objArr[i]; //as ColoredPoint
         console.log(`  ${tmpObj.getDistanseToStart()} ${tmpObj.someMethod()}`);
     }
     else {
@@ -105,6 +111,7 @@ class PointFromInterface {
     }
 }
 let xxxcxc = new PointFromInterface(34, 56);
+console.log(typeof xxxcxc);
 console.log(xxxcxc.length());
 class Animal {
     constructor(theName) { this.name = theName; }

@@ -1,15 +1,15 @@
 ﻿class Point {
-    public x: number;
-    public y: number;
+    //public x: number;
+    //public y: number;
 
-    constructor(x: number, y: number) {
-        this.x = x;
-        this.y = y;
-    }
+    //constructor(x: number, y: number) {
+    //    this.x = x;
+    //    this.y = y;
+    //}
 
-    //constructor(public x: number, public y: number) { }
+    constructor(public x: number, public y: number) { x = 2; }
 
-    public getDistanseToStart(): number {
+    public getDistanseToStart() {
         return Math.sqrt(this.x * this.x + this.y * this.y);
     }
     static zeroPoint = new Point(0, 0);

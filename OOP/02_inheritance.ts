@@ -17,7 +17,6 @@
 
 }
 
-
 enum Color {
     Red,
     Green,
@@ -29,11 +28,11 @@ class ColoredPoint extends BasePoint {
         super(x, y);
     }
 
-    getColor() {
+    public get getColor() {
         return this.color;
     }
 
-    public toString() {
+    public toString():string {
         return super.toString() + " color=" + Color[this.color];
     }
 
@@ -54,14 +53,13 @@ let objArr: BasePoint[];
 objArr = [new BasePoint(1, 1), new ColoredPoint(2, 2, Color.Red)];
 
 for (var i = 0; i < objArr.length; i++) {
-    if (objArr instanceof ColoredPoint) {
-        let tmpObj = objArr[i] as ColoredPoint
+    if (objArr instanceof ColoredPoint) {  // is
+        let tmpObj = <ColoredPoint>objArr[i];  //as ColoredPoint
         console.log(`  ${tmpObj.getDistanseToStart()} ${tmpObj.someMethod()}`);
     } else {
         console.log(`  ${objArr[i].getDistanseToStart()} ${objArr[i]}`);
     }
 }
-
 
 
 let pointBase = new BasePoint(5, 5);

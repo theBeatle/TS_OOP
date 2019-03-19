@@ -4,7 +4,6 @@
         Green,
         Black
     }
-
 }
 
 enum SomeEnum {
@@ -46,14 +45,11 @@ namespace Points {
         }
 
         public toString() {
-            return super.toString() + " color=" + PointProgram.Enums.Color[this.color];
+            return super.toString() + " color=" + someC[this.color];
         }
 
         someMethod() {
             let x = this.x;
-            import al = MyNamespace.Interfaces.SimeAnimal;
-            let cc = new al();
-
         }
 
     }
@@ -61,7 +57,7 @@ namespace Points {
 
 namespace MyNamespace {
 
-    import alias1 = Interfaces
+    import alias1 = Interfaces.IUser
 
     export namespace Interfaces {
         export interface IUser {
@@ -73,7 +69,7 @@ namespace MyNamespace {
         } ;
     }
 
-    export class User implements alias1.IUser {
+    export class User implements alias1 {
 
         constructor(public id: number,
             public name: string,

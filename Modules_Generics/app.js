@@ -17,6 +17,7 @@ var SomeEnum;
 })(SomeEnum || (SomeEnum = {}));
 var Points;
 (function (Points) {
+    var someC = PointProgram.Enums.Color; // alias :-)
     class Point {
         constructor(x, y) {
             this.x = x;
@@ -40,7 +41,7 @@ var Points;
             return this.color;
         }
         toString() {
-            return super.toString() + " color=" + PointProgram.Enums.Color[this.color];
+            return super.toString() + " color=" + someC[this.color];
         }
         someMethod() {
             let x = this.x;
@@ -50,6 +51,13 @@ var Points;
 })(Points || (Points = {}));
 var MyNamespace;
 (function (MyNamespace) {
+    var Interfaces;
+    (function (Interfaces) {
+        class SimeAnimal {
+        }
+        Interfaces.SimeAnimal = SimeAnimal;
+        ;
+    })(Interfaces = MyNamespace.Interfaces || (MyNamespace.Interfaces = {}));
     class User {
         constructor(id, name, phone) {
             this.id = id;

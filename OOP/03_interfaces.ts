@@ -18,5 +18,6 @@ class PointFromInterface implements IPoint {
 }
 
 
-let xxxcxc = new PointFromInterface(34, 56);
+let xxxcxc: IPoint = new PointFromInterface(34, 56);
+console.log(typeof xxxcxc);
 console.log(xxxcxc.length());
