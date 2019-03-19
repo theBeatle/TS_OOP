@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "target": "es6",
+    "outFile": "app.js"
+  },
+  "files": [
+    "app.ts",
+    "inheritance.ts"
+  ]
+
+
+}
